@@ -1,0 +1,68 @@
+CREATE DATABASE SIIT_DB;
+
+CREATE TABLE Students(
+StudentID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+NAME nvarchar(255) NOT NULL,
+Profession nvarchar(255) NOT NULL,
+CourseID int,
+);
+
+CREATE TABLE Courses(
+CourseID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+Name nvarchar(255) NOT NULL,
+Duration int,
+TeacherID int,
+);
+
+CREATE TABLE Teachers(
+TeacherID int NOT NULL IDENTITY(1,1) Primary KEY,
+Name nvarchar(255),
+);
+
+--STUDENT INSERT
+INSERT INTO Students(NAME,Profession,CourseID)
+VALUES('COSMIN','INGINER',1);
+INSERT INTO Students(NAME,Profession,CourseID)
+VALUES('ALEXANDRU','PROGRAMATOR',2);
+INSERT INTO Students(NAME,Profession,CourseID)
+VALUES('ALEXANDRA','PROGRAMATOR',3);
+INSERT INTO Students(NAME,Profession,CourseID)
+VALUES('ANDREEA','MEDIC',4);
+INSERT INTO Students(NAME,Profession,CourseID)
+VALUES('DRAGOS','AVOCAT',5);
+INSERT INTO Students(NAME,Profession,CourseID)
+VALUES('MARIUS','FIZICIAN',6);
+INSERT INTO Students(NAME,Profession,CourseID)
+VALUES('LIVIU','CHIMIST',7);
+INSERT INTO Students(NAME,Profession,CourseID)
+VALUES('OTILIA','PROGRAMATOR',8);
+INSERT INTO Students(NAME,Profession,CourseID)
+VALUES('MARIA','PROGRAMATOR',9);
+INSERT INTO Students(NAME,Profession,CourseID)
+VALUES('IOANA','PROGRAMATOR',10);
+
+UPDATE Students
+SET CourseID = 2
+WHERE NAME = 'Alexandra';
+
+
+
+
+--COURSE INSERT
+INSERT INTO Courses(Name,Duration)--DURATION HOURS/WEEK
+VALUES('ORGANE DE MASINI',5);
+INSERT INTO Courses(Name,Duration)
+VALUES('ALGORITMICA',4);
+INSERT INTO Courses(Name,Duration)
+VALUES('BAZE DE DATE',6);
+
+--TEACHER INSERT
+
+INSERT INTO Teachers(Name)
+VALUES('IONESCU');
+INSERT INTO Teachers(Name)
+VALUES('POPESCU');
+INSERT INTO Teachers(Name)
+VALUES('VASILESCU');
+
+
